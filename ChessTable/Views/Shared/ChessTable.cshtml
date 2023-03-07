@@ -1,0 +1,20 @@
+@model ChessTableModel
+
+<table class="chess-board">
+    <tbody>
+    <tr>
+        <th></th>
+        <th>a</th>
+        <th>b</th>
+        <th>c</th>
+        <th>d</th>
+        <th>e</th>
+        <th>f</th>
+        <th>g</th>
+        <th>h</th>
+    </tr>
+    @foreach (var row in Model.Rows)
+    {
+        await Html.RenderPartialAsync("ChessRow", row);
+    }
+</table>

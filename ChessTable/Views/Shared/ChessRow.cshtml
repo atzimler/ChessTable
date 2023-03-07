@@ -1,0 +1,9 @@
+@model ChessRowModel
+
+<tr>
+    <th>@Model.RowNumber</th>
+    @foreach (var square in Model.Squares)
+    {
+        await Html.RenderPartialAsync("ChessSquare", square);
+    }
+</tr>
